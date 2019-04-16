@@ -33,10 +33,10 @@ def lambda_handler(event, context):
         build_bucket.download_fileobj(location["objectKey"], portfolio_zip)
         
         with zipfile.ZipFile(portfolio_zip) as myzip:
-            for name in myzip.namelist():
-                obj = myzip.open(name)
-                portfolio_bucket.upload_fileobj(obj, name)
-                portfolio_bucket.Object(name).Acl().put(ACL='public-read')
+            for nm in myzip.namelist():
+                obj = myzip.open(nm)
+                portfolio_bucket.upload_fileobj(obj, nm)
+                portfolio_bucket.Object(nm).Acl().put(ACL='public-read')
         print 'Portfolio has been deployed!'
         topic.publish(Subject="Portfolio deployment completed", Message="https://portfolio.ianbunn.studio")
         if job:
