@@ -7,41 +7,50 @@
 /*
   COLORS
 
-  Dark Blue
-    rgb(6, 50, 86)
+  Eerie Black
+    rgba(10, 23, 28, 1)
 
-  Skye Blue
-    rgb(52, 152, 219)
+  Dark Midnight Blue
+    rgba(4, 57, 94, 1)
 
   Grey
     rgb(127, 140, 141)
+  Silver
+    rgba(194, 207, 178, 1)
 
-  Cloud
-    rgb(236, 240, 241)
+  Eggshell
+    rgba(239, 230, 221, 1)
+  
+  Blue Sapphire
+    rgba(26, 94, 99, 1)
 */
 
-.background--skyBlue {
-  background-color: rgb(6, 50, 86);
+.background--eerieBlack {
+  background-color: rgba(10, 23, 28, 1);
 }
 
-.color--skyBlue {
-  color: rgb(6, 50, 86);
+.color--eerieBlack {
+  color: rgba(10, 23, 28, 1);
 }
 
-.color--cloud {
-  color: rgb(236, 240, 241);
+.color--eggshell {
+  color: rgba(239, 230, 221, 1);
 }
 
 .color--grey {
   color: rgb(127, 140, 141);
 }
 
-.color--darkgrey {
-  color: rgb(52, 152, 219);
+.color--silver {
+  color: rgba(194, 207, 178, 1);
+}
+
+.color--darkMidnightBlue {
+  color: rgba(4, 57, 94, 1);
 }
 
 .section__example {
-  background-color: rgb(52, 152, 219);
+  background-color: rgba(4, 57, 94, 1);
 }
 
 /*
@@ -52,15 +61,21 @@
 
 html {
   font-size: 62.5%;
+  background-color: rgba(239, 230, 221, 1);
+}
+
+@font-face {
+  font-family: oldEnglish;
+  src: url(CloisterBlack-Light.woff);
 }
 
 body {
-  font-family: 'Cardo', serif;
+  font-family: 'Alegreya Sans SC', sans-serif;
   margin: 0;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'oldEnglish', sans-serif;
   letter-spacing: .1rem;
 }
 
@@ -76,6 +91,46 @@ h1, h2, h3, h4, h5, h6 {
   overflow: auto;
 }
 
+/*
+  Header
+*/
+
+.section__heading--largest {
+  float: left;
+  font-size: 5rem;
+  margin-left: 2rem;
+}
+
+.section--social {
+  float: right;
+  line-height: 10rem;
+  margin-right: 2rem;
+}
+
+.social {
+  margin-right: 0.75rem;
+}
+
+.socialWrapper:last-child .social {
+  margin-right: 0;
+}
+
+.socialWrapper {
+  display: inline-block;
+  font-size: 3rem;
+}
+
+.anchor {
+  text-decoration: none;
+}
+
+.section--social li a:hover {
+  color: rgb(97, 213, 221);
+}
+
+.section--social li a:active {
+  color: rgba(26, 94, 99, 1);
+}
 
 /*
   Sections
@@ -103,11 +158,6 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0 auto;
   margin-bottom: 2rem;
   width: 50%;
-}
-
-.crossedOut {
-  text-decoration: line-through wavy rgb(52, 152, 219);
-  -webkit-text-decoration: line-through wavy rgb(52, 152, 219);
 }
 
 .section__text--centered {
@@ -146,6 +196,7 @@ h1, h2, h3, h4, h5, h6 {
   text-align: center;
   text-transform: uppercase;
   width: 90%;
+  letter-spacing: 2px;
 }
 
 .section__exampleImage {
@@ -155,47 +206,28 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: -50%;
 }
 
+.crossedOut {
+  text-decoration: line-through wavy rgba(4, 57, 94, 1);
+  -webkit-text-decoration: line-through wavy rgba(4, 57, 94, 1);
+}
+
+.quote {
+  font-family: 'Alegreya Sans SC', sans-serif;
+}
+
 /*
-  Header
+  Footer
 */
 
-.section__heading--largest {
-  float: left;
-  font-size: 5rem;
-  margin-left: 2rem;
+footer {
+  font-size: 1.5rem;
+  /* min-height: 70vh; */
+  position: relative;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  padding-left: 2rem;
+  color: rgba(10, 23, 28, 1);
 }
-
-.section--social {
-  float: right;
-  line-height: 10rem;
-  margin-right: 2rem;
-}
-
-.social {
-  margin-right: 0.75rem;
-}
-
-.socialWrapper:last-child .social {
-  margin-right: 0;
-}
-
-.socialWrapper {
-  display: inline-block;
-  font-size: 3rem;
-}
-
-.anchor {
-  text-decoration: none;
-}
-
-.section--social li a:hover {
-  color: rgb(52, 152, 219);
-}
-
-.section--social li a:active {
-  color: rgb(52, 152, 219);
-}
-
 
 /*
   Modal
