@@ -19,7 +19,7 @@ def lambda_handler(event, context):
         
         if job:
             for artifact in job["data"]["inputArtifacts"]:
-                if artifact["name"] == "BuildArtifact":
+                if artifact["name"] == "SourceArtifact":
                     location = artifact["location"]["s3Location"]
         
         print "Building portfolio from " + str(location)
