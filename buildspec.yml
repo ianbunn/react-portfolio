@@ -8,5 +8,8 @@ artifacts:
   files:
     - index.html
     - misc/IanBunnCV.pdf
-    - styles/*
-    - images/*
+    - styles/main.css
+    - styles/CloisterBlack-Light.woff
+    - images/example1.png
+    - images/example2.png
+    - images/example3.png
