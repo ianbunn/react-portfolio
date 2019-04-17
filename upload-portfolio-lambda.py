@@ -1,5 +1,5 @@
-import json
 import boto3
+import json
 from botocore.client import Config
 import StringIO
 import zipfile
@@ -18,7 +18,7 @@ def lambda_handler(event, context):
         build_bucket = s3.Bucket('portfoliobuild.ianbunn.studio')
         
         portfolio_zip = StringIO.StringIO()
-        build_bucket.download_fileobj('portfoliobuild.ianbunn.studio', portfolio_zip)
+        build_bucket.download_fileobj('portfoliobuild.zip', portfolio_zip)
         
         with zipfile.ZipFile(portfolio_zip) as myzip:
             for nm in myzip.namelist():
